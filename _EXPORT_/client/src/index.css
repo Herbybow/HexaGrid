@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+  /* Prevent scroll if grid fits */
+}
+
+/* Custom Brutalist Scrollbar if needed */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  border-left: 1px solid #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 2px solid #000;
+}
