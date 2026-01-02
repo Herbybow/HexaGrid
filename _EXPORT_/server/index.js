@@ -93,7 +93,9 @@ app.post('/api/background', upload.single('background'), (req, res) => {
 });
 
 // Any request that doesn't match an API route or static file gets sent to index.html
-app.get('(.*)', (req, res, next) => {
+//FIXED ?
+app.get('/:path*', (req, res, next) => { ... })
+
     if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) return next();
     res.sendFile(path.join(clientDistPath, 'index.html'));
 });
@@ -435,4 +437,5 @@ const PORT = process.env.PORT || 3001;
 httpServer.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
 
